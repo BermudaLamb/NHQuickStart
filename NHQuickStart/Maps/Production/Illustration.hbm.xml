@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="NHQuickStart" namespace="NHQuickStart.Models.Production" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Illustration" table="Illustration" schema="Production" lazy="true" >
+		<id name="Illustrationid">
+			<column name="IllustrationID" sql-type="int" not-null="true" />
+			<generator class="identity" />
+		</id>
+
+		<property name="Diagram">
+			<column name="Diagram" sql-type="xml" not-null="false" />
+		</property>
+
+		<property name="Modifieddate">
+			<column name="ModifiedDate" sql-type="datetime" not-null="true" />
+		</property>
+
+  </class>
+</hibernate-mapping>

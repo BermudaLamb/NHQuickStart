@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="NHQuickStart" namespace="NHQuickStart.Models.Purchasing" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Purchaseorderheader" table="PurchaseOrderHeader" schema="Purchasing" lazy="true" >
+		<id name="Purchaseorderid">
+			<column name="PurchaseOrderID" sql-type="int" not-null="true" />
+			<generator class="identity" />
+		</id>
+
+		<property name="Revisionnumber">
+			<column name="RevisionNumber" sql-type="tinyint" not-null="true" />
+		</property>
+
+		<property name="Status">
+			<column name="Status" sql-type="tinyint" not-null="true" />
+		</property>
+
+		<property name="Employeeid">
+			<column name="EmployeeID" sql-type="int" not-null="true" />
+		</property>
+		<many-to-one name="Employee">
+			<column name="EmployeeID" sql-type="int" not-null="true" />
+		</many-to-one>
+		<property name="Vendorid">
+			<column name="VendorID" sql-type="int" not-null="true" />
+		</property>
+		<many-to-one name="Vendor">
+			<column name="VendorID" sql-type="int" not-null="true" />
+		</many-to-one>
+		<property name="Shipmethodid">
+			<column name="ShipMethodID" sql-type="int" not-null="true" />
+		</property>
+		<many-to-one name="Shipmethod">
+			<column name="ShipMethodID" sql-type="int" not-null="true" />
+		</many-to-one>
+		<property name="Orderdate">
+			<column name="OrderDate" sql-type="datetime" not-null="true" />
+		</property>
+
+		<property name="Shipdate">
+			<column name="ShipDate" sql-type="datetime" not-null="false" />
+		</property>
+
+		<property name="Subtotal">
+			<column name="SubTotal" sql-type="money" not-null="true" />
+		</property>
+
+		<property name="Taxamt">
+			<column name="TaxAmt" sql-type="money" not-null="true" />
+		</property>
+
+		<property name="Freight">
+			<column name="Freight" sql-type="money" not-null="true" />
+		</property>
+
+		<property name="Totaldue">
+			<column name="TotalDue" sql-type="money" not-null="true" />
+		</property>
+
+		<property name="Modifieddate">
+			<column name="ModifiedDate" sql-type="datetime" not-null="true" />
+		</property>
+
+  </class>
+</hibernate-mapping>

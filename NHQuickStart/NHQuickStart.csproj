@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A24026F-7E4A-4F5E-AE91-7741600B5422}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NHQuickStart</RootNamespace>
+    <AssemblyName>NHQuickStart</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HumanResources\Department.cs" />
+    <Compile Include="Models\HumanResources\Employee.cs" />
+    <Compile Include="Models\HumanResources\EmployeeDepartmentHistory.cs" />
+    <Compile Include="Models\HumanResources\EmployeePayHistory.cs" />
+    <Compile Include="Models\HumanResources\JobCandidate.cs" />
+    <Compile Include="Models\HumanResources\Shift.cs" />
+    <Compile Include="Models\Person\Address.cs" />
+    <Compile Include="Models\Person\AddressType.cs" />
+    <Compile Include="Models\Person\BusinessEntity.cs" />
+    <Compile Include="Models\Person\BusinessEntityAddress.cs" />
+    <Compile Include="Models\Person\BusinessEntityContact.cs" />
+    <Compile Include="Models\Person\ContactType.cs" />
+    <Compile Include="Models\Person\CountryRegion.cs" />
+    <Compile Include="Models\Person\EmailAddress.cs" />
+    <Compile Include="Models\Person\Password.cs" />
+    <Compile Include="Models\Person\Person.cs" />
+    <Compile Include="Models\Person\PersonPhone.cs" />
+    <Compile Include="Models\Person\PhoneNumberType.cs" />
+    <Compile Include="Models\Person\StateProvince.cs" />
+    <Compile Include="Models\Production\BillOfMaterials.cs" />
+    <Compile Include="Models\Production\Culture.cs" />
+    <Compile Include="Models\Production\Document.cs" />
+    <Compile Include="Models\Production\Illustration.cs" />
+    <Compile Include="Models\Production\Location.cs" />
+    <Compile Include="Models\Production\Product.cs" />
+    <Compile Include="Models\Production\ProductCategory.cs" />
+    <Compile Include="Models\Production\ProductCostHistory.cs" />
+    <Compile Include="Models\Production\ProductDescription.cs" />
+    <Compile Include="Models\Production\ProductDocument.cs" />
+    <Compile Include="Models\Production\ProductInventory.cs" />
+    <Compile Include="Models\Production\ProductListPriceHistory.cs" />
+    <Compile Include="Models\Production\ProductModel.cs" />
+    <Compile Include="Models\Production\ProductModelIllustration.cs" />
+    <Compile Include="Models\Production\ProductModelProductDescriptionCulture.cs" />
+    <Compile Include="Models\Production\ProductPhoto.cs" />
+    <Compile Include="Models\Production\ProductProductPhoto.cs" />
+    <Compile Include="Models\Production\ProductReview.cs" />
+    <Compile Include="Models\Production\ProductSubcategory.cs" />
+    <Compile Include="Models\Production\ScrapReason.cs" />
+    <Compile Include="Models\Production\TransactionHistory.cs" />
+    <Compile Include="Models\Production\TransactionHistoryArchive.cs" />
+    <Compile Include="Models\Production\UnitMeasure.cs" />
+    <Compile Include="Models\Production\Workorder.cs" />
+    <Compile Include="Models\Production\Workorderrouting.cs" />
+    <Compile Include="Models\Purchasing\Productvendor.cs" />
+    <Compile Include="Models\Purchasing\Purchaseorderdetail.cs" />
+    <Compile Include="Models\Purchasing\Purchaseorderheader.cs" />
+    <Compile Include="Models\Purchasing\Shipmethod.cs" />
+    <Compile Include="Models\Purchasing\Vendor.cs" />
+    <Compile Include="Models\Sales\CountryRegionCurrency.cs" />
+    <Compile Include="Models\Sales\CreditCard.cs" />
+    <Compile Include="Models\Sales\Currency.cs" />
+    <Compile Include="Models\Sales\CurrencyRate.cs" />
+    <Compile Include="Models\Sales\Customer.cs" />
+    <Compile Include="Models\Sales\PersonCreditCard.cs" />
+    <Compile Include="Models\Sales\SalesOrderDetail.cs" />
+    <Compile Include="Models\Sales\SalesOrderHeader.cs" />
+    <Compile Include="Models\Sales\SalesOrderHeaderSalesReason.cs" />
+    <Compile Include="Models\Sales\SalesPerson.cs" />
+    <Compile Include="Models\Sales\SalesPersonQuotaHistory.cs" />
+    <Compile Include="Models\Sales\SalesReason.cs" />
+    <Compile Include="Models\Sales\SalesTaxRate.cs" />
+    <Compile Include="Models\Sales\SalesTerritory.cs" />
+    <Compile Include="Models\Sales\SalesTerritoryHistory.cs" />
+    <Compile Include="Models\Sales\ShoppingCartItem.cs" />
+    <Compile Include="Models\Sales\SpecialOffer.cs" />
+    <Compile Include="Models\Sales\SpecialOfferProduct.cs" />
+    <Compile Include="Models\Sales\Store.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\HumanResources\EmployeeDepartmentHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\HumanResources\EmployeePayHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\BusinessEntityAddress.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\BusinessEntityContact.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\EmailAddress.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\Person.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maps\Person\PersonPhone.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\CountryRegionCurrency.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\Currency.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\HumanResources\Department.hbm.xml" />
+    <EmbeddedResource Include="Maps\HumanResources\JobCandidate.hbm.xml" />
+    <EmbeddedResource Include="Maps\HumanResources\Shift.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\Address.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\AddressType.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\BusinessEntity.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\ContactType.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\CountryRegion.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\Password.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\PhoneNumberType.hbm.xml" />
+    <EmbeddedResource Include="Maps\Person\StateProvince.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\HumanResources\Employee.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Sales\CreditCard.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\CurrencyRate.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\Customer.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\PersonCreditCard.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesOrderDetail.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesOrderHeader.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesOrderHeaderSalesReason.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesPerson.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesPersonQuotaHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesReason.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesTaxRate.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesTerritory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SalesTerritoryHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\ShoppingCartItem.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SpecialOffer.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\SpecialOfferProduct.hbm.xml" />
+    <EmbeddedResource Include="Maps\Sales\Store.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Production\BillOfMaterials.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\Culture.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\Document.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\Illustration.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\Location.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\Product.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductCategory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductCostHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductDescription.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductDocument.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductInventory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductListPriceHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductModel.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductModelIllustration.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductModelProductDescriptionCulture.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductPhoto.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductProductPhoto.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductReview.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ProductSubcategory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\ScrapReason.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\TransactionHistory.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\TransactionHistoryArchive.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\UnitMeasure.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\WorkOrder.hbm.xml" />
+    <EmbeddedResource Include="Maps\Production\WorkOrderRouting.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\Purchasing\Productvendor.hbm.xml" />
+    <EmbeddedResource Include="Maps\Purchasing\Purchaseorderdetail.hbm.xml" />
+    <EmbeddedResource Include="Maps\Purchasing\Purchaseorderheader.hbm.xml" />
+    <EmbeddedResource Include="Maps\Purchasing\Shipmethod.hbm.xml" />
+    <EmbeddedResource Include="Maps\Purchasing\Vendor.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
