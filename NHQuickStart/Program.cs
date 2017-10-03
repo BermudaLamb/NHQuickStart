@@ -17,10 +17,10 @@ namespace NHQuickStart
                     .BuildSessionFactory();
                 using (var session = sessionFactory.OpenSession())
                 {
-                    session.Query<Person>().OrderBy(p => new[] { p.Lastname, p.Firstname })
+                    var persons = session.Query<Person>().OrderBy(p => new[] { p.Lastname, p.Firstname })
                         .Where(p => p.Lastname.StartsWith("C"))
-                        .Skip(100).Take(100).ToList()
-                        .ForEach(p => Console.WriteLine("Name: {0}, {1}", p.Lastname, p.Firstname));
+                        .Skip(100).Take(100).ToList();
+                    persons.ForEach(p => Console.WriteLine("Name: {0}, {1}", p.Lastname, p.Firstname));
                     var emps = session.Query<Employee>()
                         .Take(10).ToList();
                     emps.ForEach(e => Console.WriteLine("Employee: {2}\tPerson: {0}, {1}", e.Person.Lastname, e.Person.Firstname, e.Jobtitle));
